@@ -1,0 +1,744 @@
+/* ========================================
+   SALAI CENTER - PROFESSIONAL STYLING
+   NUSHERO FEROZ, SINDH
+   ======================================== */
+
+/* Google Fonts - Poppins for modern look */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fcf8f4;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== COLOR VARIABLES ===== */
+:root {
+  --primary: #c1784a; /* Warm brown/orange */
+  --primary-dark: #9e5f38;
+  --secondary: #2c3e50; /* Dark blue-gray */
+  --accent: #e6b17e; /* Light gold */
+  --light: #f9f1e9;
+  --dark: #1e2b37;
+  --success: #4caf50;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --text: #444;
+}
+
+/* ===== HEADER STYLES ===== */
+.header {
+  background: linear-gradient(135deg, var(--secondary), #1a2632);
+  color: white;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent);
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 30px;
+  margin-left: 0.2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.nav a:hover::after {
+  width: 80%;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #fff8f2, #fae9dd);
+  padding: 3rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(230, 177, 126, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text h1 span {
+  color: var(--primary);
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 2rem;
+  color: #5a4a3e;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-image i {
+  font-size: 15rem;
+  color: var(--primary);
+  filter: drop-shadow(0 20px 30px rgba(193, 120, 74, 0.3));
+  opacity: 0.9;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px rgba(193, 120, 74, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: -1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(193, 120, 74, 0.4);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 5rem 5%;
+  background: white;
+}
+
+.section:nth-child(even) {
+  background: var(--light);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--dark);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+.section-title span {
+  color: var(--primary);
+  background: rgba(193, 120, 74, 0.1);
+  padding: 0.2rem 1rem;
+  border-radius: 50px;
+}
+
+/* ===== SERVICES GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(193, 120, 74, 0.1);
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(193, 120, 74, 0.15);
+  border-color: transparent;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card i {
+  font-size: 4rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  background: rgba(193, 120, 74, 0.1);
+  padding: 1.5rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.service-card:hover i {
+  background: var(--primary);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark);
+}
+
+.service-card p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* ===== PRICE LIST ===== */
+.price-list {
+  background: linear-gradient(135deg, #fff, #fcf8f4);
+  border-radius: 30px;
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(193, 120, 74, 0.1);
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: 2px dashed rgba(193, 120, 74, 0.2);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.price-item:hover {
+  transform: translateX(10px);
+  color: var(--primary);
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item strong {
+  color: var(--primary);
+  font-size: 1.3rem;
+  background: rgba(193, 120, 74, 0.1);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+}
+
+/* ===== BOOKING FORM ===== */
+.booking-section {
+  background: linear-gradient(135deg, var(--dark), #2c3e50);
+  padding: 5rem 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(230, 177, 126, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.booking-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  text-align: center;
+  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid #f0e0d5;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background: #fefcf9;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(193, 120, 74, 0.1);
+  background: white;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  box-shadow: 0 8px 20px rgba(193, 120, 74, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(193, 120, 74, 0.4);
+}
+
+.trust-badge {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1.5rem;
+  background: #f0f9f0;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  display: none;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  background: linear-gradient(135deg, var(--secondary), #1a2632);
+  padding: 3rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  color: white;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+}
+
+.social-links i {
+  font-size: 1.8rem;
+  margin: 0 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #aaa;
+}
+
+.social-links i:hover {
+  color: var(--accent);
+  transform: translateY(-5px) scale(1.2);
+}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35px;
+  line-height: 70px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+  z-index: 100;
+  transition: all 0.3s;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-text h1 span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav {
+    margin: 1rem 0;
+  }
+
+  .nav a {
+    margin: 0 0.8rem;
+    display: inline-block;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-text h1 span {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+  }
+
+  .hero-buttons {
+    text-align: center;
+  }
+
+  .hero-image i {
+    font-size: 10rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav a {
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h1 span {
+    font-size: 1.8rem;
+  }
+
+  .booking-form {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--accent));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}

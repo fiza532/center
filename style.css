@@ -173,6 +173,7 @@ body {
 }
 
 .hero-image {
+  margin top: 40px;
   flex: 1;
   text-align: center;
   min-width: 300px;
@@ -742,3 +743,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
 }
+

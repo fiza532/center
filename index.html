@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salai Center | Stitching & Girls Course - Nushero Feroz</title>
+
+    <!-- Font Awesome 6 (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- WhatsApp Float Button -->
+    <a
+      href="https://wa.me/923003365632"
+      class="whatsapp-float"
+      target="_blank"
+      id="whatsappFloat"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <h1>Salai <span>Center</span></h1>
+      </div>
+      <nav class="nav" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Stitching & <span>Girls Course</span></h1>
+        <p>Professional Stitching | 3 Months Course | Nushero Feroz</p>
+        <div class="hero-buttons">
+          <button class="btn" id="bookNowBtn">Book Now</button>
+          <button class="btn btn-outline" id="servicesBtn">Services</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-cut"></i>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <h2 class="section-title">Our <span>Services</span></h2>
+      <div class="services-grid" id="servicesGrid">
+        <!-- Services will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Price List -->
+    <section class="section" id="prices">
+      <h2 class="section-title">Stitching <span>Rates</span></h2>
+      <div class="price-list" id="priceList">
+        <!-- Price list will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Simple Booking Form -->
+    <section class="booking-section" id="booking">
+      <div class="booking-form">
+        <h2 class="form-title">📝 Appointment Book Karein</h2>
+        <p class="form-subtitle">Sirf 10 second mein book karein</p>
+
+        <form id="bookingForm" onsubmit="return false;">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              placeholder="👤 Apna naam likhein *"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="tel"
+              id="phone"
+              placeholder="📱 Mobile number *"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <select id="service" required>
+              <option value="">🔧 Service chunein *</option>
+              <option value="Ladies Stitching">👗 Ladies Stitching</option>
+              <option value="Gents Stitching">👔 Kids Stitching</option>
+              <option value="Girls Course">👩‍🎓 Girls Course</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <textarea
+              id="message"
+              rows="2"
+              placeholder="📝 Message (optional)"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <i class="fab fa-whatsapp"></i> Book Now
+          </button>
+        </form>
+
+        <div id="formStatus" class="form-status"></div>
+        <p class="trust-badge">✅ Free booking | ✅ WhatsApp confirmation</p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <div class="contact-info" id="contact">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Nushero Feroz, Sindh</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>0300 3365632</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>abcfiza18@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-clock"></i>
+        <span>9am - 6pm (Mon-Sat)</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Salai Center | Nushero Feroz, Sindh</p>
+      <div class="social-links">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </footer>
+
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
+  </body>
+</html>
